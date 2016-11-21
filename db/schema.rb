@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161115094819) do
+ActiveRecord::Schema.define(version: 20161121064112) do
+
+  create_table "configurations", force: :cascade do |t|
+    t.integer  "vendor_id"
+    t.string   "model"
+    t.text     "sw_comments"
+    t.integer  "owner_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "groups", force: :cascade do |t|
     t.string   "groupname"
@@ -23,6 +32,15 @@ ActiveRecord::Schema.define(version: 20161115094819) do
     t.integer  "my_group_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.integer  "configuration_id"
+    t.text     "serialnumber"
+    t.integer  "site_id"
+    t.string   "state_value"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "users", force: :cascade do |t|
