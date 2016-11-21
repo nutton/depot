@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/doabit/semantic-ui-sass
+  revision: b51eed21bcdf9a918414d8ef1b57a43a783e0a39
+  specs:
+    semantic-ui-sass (2.2.6.0)
+      sass (>= 3.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -39,12 +46,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
-    autoprefixer-rails (6.5.3)
-      execjs
     bcrypt (3.1.11)
-    bootstrap-sass (3.3.7)
-      autoprefixer-rails (>= 5.2.1)
-      sass (>= 3.3.4)
     builder (3.2.2)
     byebug (9.0.6)
     cancan (1.6.10)
@@ -180,7 +182,6 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
-  bootstrap-sass
   byebug
   cancan
   coffee-rails (~> 4.2)
@@ -192,6 +193,7 @@ DEPENDENCIES
   rails (~> 5.0.0, >= 5.0.0.1)
   ruby-graphviz
   sass-rails (~> 5.0)
+  semantic-ui-sass!
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
