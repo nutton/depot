@@ -21,11 +21,14 @@
     <% else %>
 	<% render 'utils/nav_bar_unsigned' %>
     <% end %>
-    <div class="ui main text container">
-	<p>
+  <div class="ui main container">
+	   <p>
 	    <%= yield %>
-	</p>
-    </div>
+	   </p>
+     <p>
+      <%= console %>
+     </p>
+   </div>
 
 
   </body>
