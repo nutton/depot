@@ -9,7 +9,9 @@ gem 'sqlite3'
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 #gem 'bootstrap-sass' 
+gem 'compass'
 gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass'
+gem 'semantic-ui-rails'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

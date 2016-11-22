@@ -15,21 +15,18 @@
 
   <body>
     <% if user_signed_in? %>
-      <div class="container">
-        <% render 'utils/nav_bar_signed' %>
-      </div>
-    <% else %>
 
+        <% render 'utils/nav_bar_signed' %>
+
+    <% else %>
+	<% render 'utils/nav_bar_unsigned' %>
     <% end %>
-    <div class="container">
-    <%= yield %>
+    <div class="ui main text container">
+	<p>
+	    <%= yield %>
+	</p>
     </div>
 
-    <footer>
-      <div class="container">
-        <br/>
-        <div style="text-align:right"><p>&copy; Храбрых А.С. 2013-2016 г.</p></div>
-      </div>
-    </footer>
+
   </body>
 </html>
