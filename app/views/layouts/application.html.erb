@@ -11,25 +11,65 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <style type="text/css">
+      body {
+        margin-top: 60px;
+      };
+    </style>
   </head>
 
   <body>
-    <% if user_signed_in? %>
 
-        <% render 'utils/nav_bar_signed' %>
-
-    <% else %>
-	<% render 'utils/nav_bar_unsigned' %>
-    <% end %>
   <div class="ui main container">
+
+    <% if user_signed_in? %>
+     <div class="ui fixed inverted menu">
+        <div class="ui container">
+          <a href="#" class="header item">
+            <%= image_tag "logo.png"%>
+            &nbsp;&nbsp;Project Name
+          </a>
+          <%= link_to "Home", root_path, :class => "item" %>
+          <div class="ui simple dropdown item">
+            Справочники: <i class="dropdown icon"></i>
+            <div class="menu">
+              <a class="item" href="#">Link Item</a>
+              <a class="item" href="#">Link Item</a>
+              <div class="divider"></div>
+              <div class="header">Header Item</div>
+              <div class="item">
+                <i class="dropdown icon"></i>
+                Sub Menu
+                <div class="menu">
+                  <a class="item" href="#">Link Item</a>
+                  <a class="item" href="#">Link Item</a>
+                </div>
+              </div>
+              <a class="item" href="#">Link Item</a>
+            </div>
+          </div>
+
+         
+
+
+        </div>
+         <div class="header item">
+            <%= link_to "Выход", destroy_user_session_path, :method  => :delete, :class => "ui item" %>
+          </div>
+      </div>
+    <% else %>
+      <div class="ui fixed inverted menu">
+          <div class="ui container">
+            <a href="#" class="header item center">
+            <%= image_tag "logo.png" %>
+              Welcome to Project Name
+            </a>
+          </div>
+      </div>
+    <% end %>
 	   <p>
 	    <%= yield %>
 	   </p>
-     <p>
-      <%= console %>
-     </p>
    </div>
-
-
   </body>
 </html>
