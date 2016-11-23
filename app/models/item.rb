@@ -1,4 +1,5 @@
 class Item < ApplicationRecord
+  belongs_to :configuration
   state_machine :initial => :unknown, :attribute => :state_value do
     event :apply_to_store do
       transition [:unknown,:repair,:site] => :store
