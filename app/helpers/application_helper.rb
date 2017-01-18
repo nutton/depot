@@ -9,6 +9,13 @@ module ApplicationHelper
   	end
   end
 
+  def liwi(path,text,parms)
+    link_to path do
+      t = content_tag :i, nil, :class => parms
+      t+' '+text
+    end
+  end
+
   def menu_helper
 
   	if user_signed_in?

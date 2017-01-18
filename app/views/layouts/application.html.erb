@@ -12,9 +12,10 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <style type="text/css">
-      body {
-        margin-top: 60px;
-      };
+     /* body {
+      *  margin-top: 60px;
+      * };
+      */
     </style>
   </head>
 
@@ -29,7 +30,7 @@
             <%= image_tag "logo.png"%>
             &nbsp;&nbsp;Project Name
           </a>
-          <%= link_to "Home", root_path, :class => "item" %>
+          <%= liwi(root_path,"Домой!","ui icon home item") %>
           <div class="ui simple dropdown item">
             Справочники: <i class="dropdown icon"></i>
             <div class="menu">
