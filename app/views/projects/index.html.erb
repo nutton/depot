@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Список проектов</h1>
+
+<table class="ui table">
+  <thead>
+    <tr>
+      <th colspan=3>
+      <%= link_to 'Добавить проект', new_project_path, :class => "ui button small black" %>
+      </th>
+    </tr>
+    <tr>
+      <th>Наименование проекта</th>
+      <th>Комментарии</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= project.projectname %></td>
+        <td><%= project.comment %></td>
+        <td>
+          <div class="ui buttons small">
+            <%= link_to 'Просмотр', project, :class => "ui button green" %>
+            <%= link_to 'Правка', edit_project_path(project), :class => "ui button blue" %>
+            <%= link_to 'Удалить', project, method: :delete, data: { confirm: 'Вы уверены?' }, :class =>"ui button red" %>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
