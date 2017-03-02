@@ -23,7 +23,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'therubyracer', platforms: :ruby
 
 # Custom gems 
-
+gem 'seed_dump'
 gem 'state_machine'
 #gem 'state_machine-activerecord'
 gem 'ruby-graphviz', :require => 'graphviz'
