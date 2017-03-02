@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item_history_id: 1
+  document_type: 1
+  document_data: 
+
+two:
+  item_history_id: 1
+  document_type: 1
+  document_data: 
